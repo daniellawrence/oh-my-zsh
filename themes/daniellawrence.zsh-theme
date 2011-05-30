@@ -19,40 +19,46 @@ YELLOW=$fg[yellow]
 GREEN=$fg[green]
 WHITE=$fg[white]
 BLUE=$fg[blue]
+MAGENTA=$fg[magenta]
+CYAN=$fg[cyan]
+#------------------------------------------------------------------
 RED_BOLD=$fg_bold[red]
 YELLOW_BOLD=$fg_bold[yellow]
 GREEN_BOLD=$fg_bold[green]
 WHITE_BOLD=$fg_bold[white]
 BLUE_BOLD=$fg_bold[blue]
+MAGENTA_BOLD=$fg_bold[magenta]
+CYAN_BOLD=$fg_bold[cyan]
+#------------------------------------------------------------------
 RESET_COLOR=$reset_color
 
 #-------------------------------------------------------------------
 # Modify Git prompt
 #-------------------------------------------------------------------
-ZSH_THEME_GIT_PROMPT_PREFIX="git(%{$fg[green]%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%})"
+ZSH_THEME_GIT_PROMPT_PREFIX="git(%{$GREEN%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$RESET_COLOR%})"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$RED_BOLD%} ✖"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$GREEN_BOLD%} ✔"
-ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]%} ✚"
-ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[blue]%} ✹"
-ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%} ✖"
-ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[magenta]%} ➜"
-ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[yellow]%} ═"
-ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%} ✭"
+ZSH_THEME_GIT_PROMPT_ADDED="%{$GREEN%} ✚"
+ZSH_THEME_GIT_PROMPT_MODIFIED="%{$BLUE%} ✹"
+ZSH_THEME_GIT_PROMPT_DELETED="%{$RED%} ✖"
+ZSH_THEME_GIT_PROMPT_RENAMED="%{$MAGENTA%} ➜"
+ZSH_THEME_GIT_PROMPT_UNMERGED="%{$YELLOW%} ═"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$CYAN%} ✭"
 
 #-------------------------------------------------------------------
 # Modify SVN prompt
 #-------------------------------------------------------------------
-ZSH_THEME_SVN_PROMPT_PREFIX="svn(%{$fg[green]%}"
-ZSH_THEME_SVN_PROMPT_SUFFIX="%{$reset_color%})"
+ZSH_THEME_SVN_PROMPT_PREFIX="svn(%{$GREEN%}"
+ZSH_THEME_SVN_PROMPT_SUFFIX="%{$RESET_COLOR%})"
 ZSH_THEME_SVN_PROMPT_DIRTY="%{$RED_BOLD%} ✖"
 ZSH_THEME_SVN_PROMPT_CLEAN="%{$GREEN_BOLD%} ✔"
-ZSH_THEME_SVN_PROMPT_ADDED="%{$fg[green]%} ✚"
-ZSH_THEME_SVN_PROMPT_MODIFIED="%{$fg[blue]%} ✹"
-ZSH_THEME_SVN_PROMPT_DELETED="%{$fg[red]%} ✖"
-ZSH_THEME_SVN_PROMPT_RENAMED="%{$fg[magenta]%} ➜"
-ZSH_THEME_SVN_PROMPT_UNMERGED="%{$fg[yellow]%} ═"
-ZSH_THEME_SVN_PROMPT_UNTRACKED="%{$fg[cyan]%} ✭"
+ZSH_THEME_SVN_PROMPT_ADDED="%{$GREEN%} ✚"
+ZSH_THEME_SVN_PROMPT_MODIFIED="%{$BLUE%} ✹"
+ZSH_THEME_SVN_PROMPT_DELETED="%{$RED%} ✖"
+ZSH_THEME_SVN_PROMPT_RENAMED="%{$MAGENTA]%} ➜"
+ZSH_THEME_SVN_PROMPT_UNMERGED="%{$YELLOW]%} ═"
+ZSH_THEME_SVN_PROMPT_UNTRACKED="%{$CYAN%} ✭"
 
 #-------------------------------------------------------------------
 # This will be useful when i forget what is what..
@@ -78,7 +84,6 @@ function root_prompt () {
 
 }
 
-
 #-------------------------------------------------------------------
 # Prompt: root
 #-------------------------------------------------------------------
@@ -87,8 +92,6 @@ function right_prompt () {
 	TIME_HHMMSS="%*"
 	RPROMPT="${RED_RC_ON_ERROR}${TIME_HHMMSS}"
 }
-
-
 
 #-------------------------------------------------------------------
 # Prompt action: work out which prompt to call ( root or user )
